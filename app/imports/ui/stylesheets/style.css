@@ -1,3 +1,31 @@
+h1{
+  color: white;
+  font-size: 20px;
+  font-family: Tangerine;
+}
+
 body {
-  padding-top: 61px;  /* Move body of page below navbar. */
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/ea/2c/26/ea2c2618a680b37f78ce4a791ba77272.jpg");
+  background-repeat: no-repeat;
+  width: 500px;
+  font-size: 34px;
+}
+
+.ui.container{
+  margin-top: 350px;
+  margin-left: 60px;
+  font-family: Tangerine;
+  font-color: white;
+  color: white;
+}
+hr{
+  width: 400px;
+}
+.white{
+  color:white;
+}
+.top{
+  font-family: Tangerine;
+  font-size: 28px;
+  margin-left: 130px;
 }
