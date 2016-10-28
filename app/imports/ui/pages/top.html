@@ -1,0 +1,53 @@
+<template name="Top">
+  <div class="ui top fixed borderless inverted menu" style="height:50px; width:570px">
+    <a class="top item" href="{{pathFor 'Home_Page'}}" style="height:50px">Eat Some Moa, Manoa</a>
+  </div>
+  <head>
+    <title>Top Picks</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+  </head>
+  {{#If_Logged_In}}
+  <div class="ui text container">
+    {{#if Template.subscriptionsReady}}
+    <h4 class="ui dividing header" style="color:white; font-family:Tangerine; font-size:20px">Search results for "hamburger"</h4>
+    <table style="margin-top: 20px; width:570px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Ingredients</th>
+        <th>Dietary Restrictions</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td><a href="{{pathFor 'user'}}" style="color:black">Classic Hamburger</a></td>
+        <td>Buns, hamburger, cheese, lettuce</td>
+        <td></td>
+        <td>$6</td>
+      </tr>
+      <tr>
+        <td>Veggie Burger</td>
+        <td>Buns, veggie patty, cheese, lettuce</td>
+        <td>Vegetarian</td>
+        <td>$6.50</td>
+      </tr>
+      </tbody>
+    </table>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+  </div>
+  <div class="ui form">
+    <div class="field">
+      <label style="color: white; font-family: Tangerine; font-size:20px">Search for a Recipe</label>
+      <input type="text" name="search" placeholder="Search" style="color:black">
+    </div>
+  </div>
+  <button class="ui button" type="submit">Search</button>
+
+  {{/If_Logged_In}}
+
+</template>

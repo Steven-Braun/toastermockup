@@ -1,14 +1,31 @@
 <template name="Home_Page">
-  <div class="ui middle aligned centered grid text container">
+  <head>
+    <title>Eat Some Moa, Manoa</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
 
-    <div class="four wide column">
-      <img class="ui small circular image" src="/images/meteor-logo.png"/>
-    </div>
+  </head>
 
-    <div class="eight wide column">
-      <h1>Welcome to this template</h1>
-      <p>Now get to work and modify this app!</p>
-    </div>
+  <body>
 
-  </div>
-</template>
+
+  {{> info}}
+  </body>
+
+  </template>
+  <template name="info">
+    <center>
+      <div class="ui container">
+        <a href="#" class="item" style="color:white">{{> loginButtons }} </a>
+        <hr>
+        <a href="{{pathFor 'Top'}}" style="color: white">Search for a Recipe</a>
+        <hr>
+        <a href="{{pathFor 'Open'}}" style="color: white">Search for an Ingredient</a>
+        <hr>
+        <a href="{{pathFor 'Profile'}}" style="color: white">Your Profile</a>
+        <hr>
+        <a href="{{pathFor 'Admin'}}" style="color: white">Manage Items</a>
+      </div>
+    </center>
+  </template>
+

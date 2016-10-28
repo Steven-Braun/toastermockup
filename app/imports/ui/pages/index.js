@@ -5,6 +5,17 @@ import './edit-stuff-page.html';
 import './edit-stuff-page.js';
 
 import './home-page.html';
+import './preferences.html';
+import './open.html';
+import './profile.html';
+import './top.html';
+import './admin.html'
+import './user.html'
 
 import './list-stuff-page.html';
 import './list-stuff-page.js';
+
+
+
+
+

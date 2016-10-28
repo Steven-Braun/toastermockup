@@ -1,0 +1,49 @@
+<template name="Open">
+  <div class="ui top fixed borderless inverted menu" style="height:50px; width:570px">
+    <a class="top item" href="{{pathFor 'Home_Page'}}" style="height:50px">Eat Some Moa, Manoa</a>
+    </div>
+  <head>
+    <title>Eat Some Moa, Manoa</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+    {{#If_Logged_In}}
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+      <h4 class="ui dividing header" style="color:white; font-family:Tangerine; font-size:20px">Search results for "cheddar cheese"</h4>
+      <table style="margin-top: 20px; width:570px" class="ui celled table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Where to Buy</th>
+          <th>Cost</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>Kraft Singles</td>
+          <td>The Market</td>
+          <td>$6.59/pack</td>
+        </tr>
+        <tr>
+          <td>Shredded Cheddar Cheese</td>
+          <td>7-11</td>
+          <td>$4.50/pack</td>
+        </tr>
+        </tbody>
+      </table>
+      {{else}}
+      {{> Loading}}
+      {{/if}}
+    </div>
+  <div class="ui form">
+    <div class="field">
+      <label style="color: white; font-family: Tangerine; font-size:20px">Search for an Ingredient</label>
+      <input type="text" name="search" placeholder="Search" style="color:black">
+    </div>
+  </div>
+  <button class="ui button" type="submit">Search</button>
+    {{/If_Logged_In}}
+
+</template>

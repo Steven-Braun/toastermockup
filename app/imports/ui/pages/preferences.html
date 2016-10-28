@@ -1,0 +1,65 @@
+<template name="Preferences">
+  <head>
+    <title>Eat Some Moa, Manoa</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+
+  </head>
+    {{#If_Logged_In}}
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+      <h4 class="ui dividing header" style="color:white; font-family:Tangerine; font-size:20px">Your Preferences</h4>
+      <table style="margin-top: 20px; width:570px" class="ui celled table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Genre</th>
+          <th>Menu</th>
+          <th>Times</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>Panda Express</td>
+          <td>Chinese</td>
+          <td><a href="https://www.pandaexpress.com/menu" style="color: black">Menu</a></td>
+          <td>9AM-5PM</td>
+        </tr>
+        <tr>
+        <td>Subway</td>
+        <td>Sandwiches</td>
+        <td><a href="http://www.subway.com/en-us/menunutrition/menu" style="color: black">Menu</a></td>
+        <td>7AM-2PM(CLOSED NOW)</td>
+        </tr>
+        </tbody>
+      </table>
+      {{else}}
+      {{> Loading}}
+      {{/if}}
+    </div>
+
+  <div class="ui form">
+    <div class="field">
+      <label style="color: white; font-family: Tangerine; font-size:20px">Add a Preference</label>
+      <input type="text" name="Add a Preference" placeholder="Add a Preference" style="color:black">
+    </div>
+  </div>
+  <button class="ui button" type="submit">Add</button>
+
+<!--    <label>Preferences</label>
+  <select class="ui fluid search dropdown" multiple="">
+      <option value="">Select Preference</option>
+      <option value="AF">Chinese</option>
+      <option value="AX">Japanese</option>
+      <option value="AL">Hawaiian/Local Grindz</option>
+      <option value="DZ">Pizza</option>
+      <option value="AS">Burgers/Fries</option>
+      <option value="AD">Desserts</option>
+      <option value="AO">Smoothies</option>
+      <option value="AI">Organic</option>
+    </select>-->
+
+    {{/If_Logged_In}}
+</template>
