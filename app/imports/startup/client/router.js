@@ -8,6 +8,57 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/preferences', {
+  name: 'Preferences',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Preferences' });
+  },
+});
+
+
+FlowRouter.route('/profile', {
+  name: 'Profile',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Profile' });
+  },
+});
+
+FlowRouter.route('/top', {
+  name: 'Top',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Top' });
+  },
+});
+
+FlowRouter.route('/admin', {
+  name: 'Admin',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Admin' });
+  },
+});
+
+
+FlowRouter.route('/open', {
+  name: 'Open',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Open' });
+  },
+});
+
+FlowRouter.route('/preferences', {
+  name: 'Preferences',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Preferences' });
+  },
+});
+
+FlowRouter.route('/user', {
+  name: 'user',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'user' });
+  },
+});
+
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
   action() {
